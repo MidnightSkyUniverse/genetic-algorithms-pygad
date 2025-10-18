@@ -1,0 +1,135 @@
+# Konfiguracja eksperymentów TSP z algorytmem genetycznym
+
+# Podstawowe ustawienia problemu
+problem:
+  num_cities: 20
+  use_fixed_cities: true  # Użyj tych samych miast dla wszystkich eksperymentów
+
+# Współrzędne ustalonych miast (dla use_fixed_cities=true)
+fixed_cities:
+  - [37.45, 95.07]
+  - [73.20, 59.86]
+  - [15.60, 15.60]
+  - [15.81, 86.62]
+  - [60.11, 70.81]
+  - [83.24, 43.19]
+  - [27.67, 52.92]
+  - [91.32, 18.47]
+  - [44.68, 30.15]
+  - [68.99, 89.23]
+  - [22.14, 67.45]
+  - [55.33, 12.78]
+  - [8.92, 38.51]
+  - [76.84, 24.66]
+  - [49.21, 77.38]
+  - [ 52.18, 43.92 ]
+  - [ 82.45, 68.31 ]
+  - [ 28.76, 28.54 ]
+  - [ 65.89, 15.77 ]
+  - [ 41.23, 60.45 ]
+
+# Parametry baseline (domyślne)
+baseline:
+  population_size: 200
+  num_generations: 300
+
+  # selekcja
+  num_parents_mating: 100
+  parent_selection_type: "tournament"
+  K_tournament: 3
+
+  #krzyżowanie
+  crossover_type: "single_point"
+  crossover_probability: 1
+
+  #mutacja
+  mutation_percent_genes: 10
+  mutation_probability: 0.05
+  mutation_type: "inversion"
+
+  #elityzm i stop
+  keep_elitism: 2
+  stop_criteria: "saturate_50"
+
+# Eksperymenty do uruchomienia
+# Każdy eksperyment nadpisuje parametry z baseline
+experiments:
+  # Baseline
+  - name: "baseline"
+    description: "Baseline Tournament (K=3)"
+    params: {}  # Użyj wszystkich wartości z baseline
+
+
+  - name: "sel_tournament_k7"
+    description: "Tournament (K=7)"
+    params:
+      parent_selection_type: "tournament"
+      K_tournament: 7
+      population_size: 300
+      num_parents_mating: 150
+      mutation_percent_genes: 25
+      crossover_type: "ox"
+
+
+#  - name: "sel_tournament_k3_ox"
+#    description: "Tournament (K=3) OX"
+#    params:
+#      parent_selection_type: "tournament"
+#      K_tournament: 3
+#      population_size: 200
+#      num_parents_mating: 100
+#      crossover_type: "ox"
+#
+#  - name: "sel_tournament_k7_ox"
+#    description: "Tournament (K=7) OX"
+#    params:
+#      parent_selection_type: "tournament"
+#      K_tournament: 7
+#      population_size: 300
+#      num_parents_mating: 150
+#      mutation_percent_genes: 25
+#      crossover_type: "ox"
+
+
+
+  - name: "sel_tournament_k5_like_k7"
+    description: "Tournament K=5 params equal K7"
+    params:
+      parent_selection_type: "tournament"
+      K_tournament: 5
+      population_size: 300
+      num_parents_mating: 150
+      mutation_percent_genes: 25
+      crossover_type: "ox"
+
+  - name: "sel_tournament_k5_like_k3"
+    description: "Tournament K=5 params equal K3"
+    params:
+      params: {}  # Użyj wszystkich wartości z baseline
+      K_tournament: 5
+
+
+#  - name: "sel_roulette"
+#    description: "Roulette Wheel"
+#    params:
+#      parent_selection_type: "rws"
+#
+#  - name: "sel_sus"
+#    description: "Stochastic Universal"
+#    params:
+#      parent_selection_type: "sss"
+
+# Ustawienia wizualizacji
+visualization:
+  save_convergence: true
+  save_route: true
+  save_animation: true
+  animation_interval: 5  # Co ile generacji klatka w animacji
+  dpi: 300
+
+# Ustawienia outputu
+output:
+  base_dir: "outputs"
+  convergence_dir: "convergence"
+  routes_dir: "routes"
+  animations_dir: "animations"

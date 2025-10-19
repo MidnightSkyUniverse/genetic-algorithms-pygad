@@ -56,6 +56,41 @@ def run_single_experiment(experiment, config, dirs, tsp_problem, monitor):
     )
 
     # Generate visualizations based on configuration
+    #
+    # ⚠️  IMPORTANT FOR RUNNING 30 REPETITIONS:
+    #
+    # When running multiple iterations (e.g., for i in {1..30}; do python main.py; done):
+    # - Visualizations are generated EVERY iteration for EVERY experiment
+    # - Only the LAST iteration's charts remain (files are overwritten)
+    # - Animations significantly slow down execution (5-10 seconds each)
+    # - Most charts are unnecessary for statistical analysis
+    #
+    # RECOMMENDATION: Disable visualizations for 30-repetition runs:
+    #
+    # Option 1 - Edit config.yaml:
+    #   visualization:
+    #     save_convergence: false
+    #     save_route: false
+    #     save_animation: false      # ← This is the slowest part!
+    #
+    # Option 2 - Comment out the blocks below
+    #
+    # ═══════════════════════════════════════════════════════════════
+    # WORKFLOW REMINDER:
+    # ═══════════════════════════════════════════════════════════════
+    # 1. Configure experiments in config.yaml (e.g., baseline, k3, k5, k7)
+    # 2. Run 30 iterations: for i in {1..30}; do python main.py; done
+    # 3. Archive results BEFORE changing config:
+    #    mv outputs outputs_run_1
+    #    mv experiment_results.csv experiments/experiment_results_run_1.csv
+    # 4. Change config.yaml to NEW experiments (e.g., roulette, sus)
+    # 5. Repeat steps 2-3 for run_2, run_3, etc.
+    # 6. Run comparative analysis: python run_analyses.py
+    #
+    # Each "run" = 30 repetitions of the SAME configuration
+    # DO NOT mix different configurations in one CSV!
+    # ═══════════════════════════════════════════════════════════════
+
     viz_config = config['visualization']
 
     if viz_config['save_convergence']:

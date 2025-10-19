@@ -24,6 +24,7 @@ projekt/
 ├── ga_tsp_analyses.py                   # Analiza pojedynczego run
 ├── run_analyses.py                      # ⭐ Analiza wielu runs
 ├── utils_unified_analyses.py            # ⭐ Funkcje do analizy wielu runs
+├── held_karp.py                         # Algorytm Held-Karp pozwala znaleść optymalna trasę dla zadanych miast
 ├── experiments/                         # Folder z danymi z wielu runs
 │   ├── experiment_results_run_1.csv
 │   ├── experiment_results_run_2.csv

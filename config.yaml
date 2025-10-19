@@ -1,11 +1,19 @@
-# Konfiguracja eksperymentów TSP z algorytmem genetycznym
+# ============================================================================
+# TSP GENETIC ALGORITHM CONFIGURATION
+# ============================================================================
+# This file defines all parameters for running TSP experiments with GA.
+# Experiments inherit 'baseline' parameters and override specific values.
 
-# Podstawowe ustawienia problemu
+
+# ============================================================================
+# PROBLEM SETTINGS
+# ============================================================================
 problem:
   num_cities: 20
-  use_fixed_cities: true  # Użyj tych samych miast dla wszystkich eksperymentów
+  use_fixed_cities: true  # Use same cities for all experiments (ensures fair comparison)
 
-# Współrzędne ustalonych miast (dla use_fixed_cities=true)
+# Fixed city coordinates (used when use_fixed_cities=true)
+# These 20 cities are used consistently across all experiments
 fixed_cities:
   - [37.45, 95.07]
   - [73.20, 59.86]
@@ -22,114 +30,184 @@ fixed_cities:
   - [8.92, 38.51]
   - [76.84, 24.66]
   - [49.21, 77.38]
-  - [ 52.18, 43.92 ]
-  - [ 82.45, 68.31 ]
-  - [ 28.76, 28.54 ]
-  - [ 65.89, 15.77 ]
-  - [ 41.23, 60.45 ]
+  - [52.18, 43.92]
+  - [82.45, 68.31]
+  - [28.76, 28.54]
+  - [65.89, 15.77]
+  - [41.23, 60.45]
 
-# Parametry baseline (domyślne)
+
+# ============================================================================
+# BASELINE PARAMETERS
+# ============================================================================
+# Default parameter values inherited by all experiments unless overridden.
+# These represent a reasonable starting configuration for TSP with GA.
+
 baseline:
-  population_size: 200
-  num_generations: 300
+  # Population settings
+  population_size: 200           # Number of solutions in each generation
+  num_generations: 300           # Maximum number of generations
 
-  # selekcja
-  num_parents_mating: 100
-  parent_selection_type: "tournament"
-  K_tournament: 3
+  # Parent selection
+  num_parents_mating: 100        # Number of parents selected for breeding (50% of population)
+  parent_selection_type: "tournament"  # Selection method: tournament, rws (roulette), sss (stochastic universal)
+  K_tournament: 3                # Tournament size (only used if parent_selection_type="tournament")
 
-  #krzyżowanie
-  crossover_type: "single_point"
-  crossover_probability: 1
+  # Crossover (recombination)
+  crossover_type: "single_point"  # Crossover method: single_point, two_points, ox (ordered crossover)
+  crossover_probability: 1.0     # Probability of applying crossover (1.0 = always)
 
-  #mutacja
-  mutation_percent_genes: 10
-  mutation_probability: 0.05
-  mutation_type: "inversion"
+  # Mutation
+  mutation_percent_genes: 10     # Percentage of genes to mutate (10% = 2 cities for 20-city TSP)
+  mutation_probability: 0.05     # Probability of mutation occurring (5%)
+  mutation_type: "inversion"     # Mutation method: swap, inversion, scramble
 
-  #elityzm i stop
-  keep_elitism: 2
-  stop_criteria: "saturate_50"
+  # Elitism and stopping criteria
+  keep_elitism: 2                # Number of best solutions preserved unchanged to next generation
+  stop_criteria: "saturate_50"   # Stop if no improvement for 50 generations
 
-# Eksperymenty do uruchomienia
-# Każdy eksperyment nadpisuje parametry z baseline
+
+# ============================================================================
+# EXPERIMENTS
+# ============================================================================
+# Each experiment inherits baseline parameters and overrides specific ones.
+# Use this to systematically test different GA configurations.
+
 experiments:
-  # Baseline
+  # ----------------------------------------------------------------------------
+  # BASELINE EXPERIMENT
+  # ----------------------------------------------------------------------------
   - name: "baseline"
     description: "Baseline Tournament (K=3)"
-    params: {}  # Użyj wszystkich wartości z baseline
+    params: {}  # No overrides - uses all baseline values
 
 
+  # ----------------------------------------------------------------------------
+  # TOURNAMENT SELECTION EXPERIMENTS
+  # ----------------------------------------------------------------------------
+
+  # Experiment: Larger tournament size with OX crossover
   - name: "sel_tournament_k7"
-    description: "Tournament (K=7)"
+    description: "Tournament (K=7) with OX crossover"
     params:
       parent_selection_type: "tournament"
-      K_tournament: 7
-      population_size: 300
-      num_parents_mating: 150
-      mutation_percent_genes: 25
-      crossover_type: "ox"
+      K_tournament: 7             # Larger tournament = higher selection pressure
+      population_size: 300        # Larger population for diversity
+      num_parents_mating: 150     # Keep 50% mating ratio
+      mutation_percent_genes: 25  # Higher mutation to maintain diversity
+      crossover_type: "ox"        # Ordered Crossover (better for TSP)
 
 
-#  - name: "sel_tournament_k3_ox"
-#    description: "Tournament (K=3) OX"
-#    params:
-#      parent_selection_type: "tournament"
-#      K_tournament: 3
-#      population_size: 200
-#      num_parents_mating: 100
-#      crossover_type: "ox"
-#
-#  - name: "sel_tournament_k7_ox"
-#    description: "Tournament (K=7) OX"
-#    params:
-#      parent_selection_type: "tournament"
-#      K_tournament: 7
-#      population_size: 300
-#      num_parents_mating: 150
-#      mutation_percent_genes: 25
-#      crossover_type: "ox"
+  # Commented experiments - uncomment to run additional tests
+  #
+  # - name: "sel_tournament_k3_ox"
+  #   description: "Tournament (K=3) with OX crossover"
+  #   params:
+  #     parent_selection_type: "tournament"
+  #     K_tournament: 3
+  #     population_size: 200
+  #     num_parents_mating: 100
+  #     crossover_type: "ox"
+  #
+  # - name: "sel_tournament_k7_ox"
+  #   description: "Tournament (K=7) with OX crossover"
+  #   params:
+  #     parent_selection_type: "tournament"
+  #     K_tournament: 7
+  #     population_size: 300
+  #     num_parents_mating: 150
+  #     mutation_percent_genes: 25
+  #     crossover_type: "ox"
 
 
+  # ----------------------------------------------------------------------------
+  # CONTROLLED COMPARISON EXPERIMENTS
+  # ----------------------------------------------------------------------------
 
+  # Test K=5 with same parameters as K=7 (isolate effect of K value)
   - name: "sel_tournament_k5_like_k7"
-    description: "Tournament K=5 params equal K7"
+    description: "Tournament K=5 with K7 parameters"
     params:
       parent_selection_type: "tournament"
-      K_tournament: 5
+      K_tournament: 5             # Only difference: K=5 instead of K=7
       population_size: 300
       num_parents_mating: 150
       mutation_percent_genes: 25
       crossover_type: "ox"
 
+  # Test K=5 with baseline parameters (isolate effect of K value)
   - name: "sel_tournament_k5_like_k3"
-    description: "Tournament K=5 params equal K3"
+    description: "Tournament K=5 with baseline parameters"
     params:
-      params: {}  # Użyj wszystkich wartości z baseline
-      K_tournament: 5
+      K_tournament: 5             # Only difference: K=5 instead of K=3 (baseline)
 
 
-#  - name: "sel_roulette"
-#    description: "Roulette Wheel"
-#    params:
-#      parent_selection_type: "rws"
-#
-#  - name: "sel_sus"
-#    description: "Stochastic Universal"
-#    params:
-#      parent_selection_type: "sss"
+  # ----------------------------------------------------------------------------
+  # ALTERNATIVE SELECTION METHODS (commented out)
+  # ----------------------------------------------------------------------------
+  # Uncomment to test different parent selection strategies
 
-# Ustawienia wizualizacji
+  # - name: "sel_roulette"
+  #   description: "Roulette Wheel Selection"
+  #   params:
+  #     parent_selection_type: "rws"  # Fitness-proportionate selection
+  #
+  # - name: "sel_sus"
+  #   description: "Stochastic Universal Sampling"
+  #   params:
+  #     parent_selection_type: "sss"  # Lower variance than roulette
+
+
+# ============================================================================
+# VISUALIZATION SETTINGS
+# ============================================================================
 visualization:
-  save_convergence: true
-  save_route: true
-  save_animation: true
-  animation_interval: 5  # Co ile generacji klatka w animacji
-  dpi: 300
+  save_convergence: true         # Generate convergence plot (fitness over generations)
+  save_route: true               # Generate best route visualization
+  save_animation: true           # Generate GIF animation of route evolution
+  animation_interval: 5          # Sample every N generations for animation (lower = smoother, slower)
+  dpi: 300                       # Resolution for saved images (300 = publication quality)
 
-# Ustawienia outputu
+
+# ============================================================================
+# OUTPUT SETTINGS
+# ============================================================================
 output:
-  base_dir: "outputs"
-  convergence_dir: "convergence"
-  routes_dir: "routes"
-  animations_dir: "animations"
+  base_dir: "outputs"            # Root directory for all outputs
+  convergence_dir: "convergence" # Subdirectory for convergence plots
+  routes_dir: "routes"           # Subdirectory for route visualizations
+  animations_dir: "animations"   # Subdirectory for GIF animations
+
+
+# ============================================================================
+# TIPS FOR STUDENTS
+# ============================================================================
+#
+# 1. START SIMPLE: Run baseline first, then add ONE experiment at a time
+#
+# 2. SYSTEMATIC TESTING: Change only ONE parameter between experiments
+#    Example: Keep all params same, only change K_tournament from 3→5→7
+#
+# 3. CROSSOVER TYPES:
+#    - single_point, two_points: Simple but often creates invalid TSP tours
+#    - ox (Ordered Crossover): Preserves tour validity, better for TSP
+#
+# 4. MUTATION RATES:
+#    - Too low (1-5%): Algorithm may get stuck in local optima
+#    - Too high (30%+): Too much randomness, acts like random search
+#    - Sweet spot: 10-20% for TSP
+#
+# 5. POPULATION SIZE:
+#    - Larger = more diversity but slower per generation
+#    - Typical range: 50-500 for TSP with 20 cities
+#
+# 6. STOPPING CRITERIA:
+#    - saturate_N: Stops after N generations without improvement
+#    - reach_fitness: Stops when target fitness reached (not used here)
+#
+# 7. ELITISM:
+#    - keep_elitism: 0-5 is typical
+#    - Ensures best solutions never lost
+#    - Too high reduces diversity
+#
+# ============================================================================

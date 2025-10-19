@@ -450,8 +450,8 @@ Powodzenia w eksperymentach! 🚀
 - Each `experiment_results_run_X.csv` contains data from ONE configuration set only
 
 **Example:**
-- `run_1`: 30 repetitions of [baseline, k3, k5, k7] → `experiment_results_run_1.csv`
-- `run_2`: 30 repetitions of [baseline_v2, k9, roulette, sus] → `experiment_results_run_2.csv`
+- `run_1`: 30 repetitions of [baseline, k3, k7, roulette, sus] → `experiment_results_run_1.csv`
+- `run_2`: 30 repetitions of [baseline, k7, population size ] → `experiment_results_run_2.csv`
 - DO NOT mix different configurations in the same CSV file!
 
 ---

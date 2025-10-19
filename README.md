@@ -109,7 +109,7 @@ python run_analyses.py
 ```
 
 **📖 Szczegółowy przewodnik:**  
-Zobacz [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) aby dowiedzieć się:
+Zobacz [MULTI_RUN_GUIDE](MULTI_RUN_GUIDE) aby dowiedzieć się:
 - Jak uruchomić wiele eksperymentów automatycznie
 - Jak wyłączyć wizualizacje dla szybszego działania
 - Jak organizować wyniki po każdym batch'u

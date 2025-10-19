@@ -66,7 +66,7 @@ Skrypt automatycznie:
 - Wygeneruje wizualizacje w folderze `outputs/`
 - Doda wyniki do `experiment_results.csv` (append)
 
-**💡 Uwaga:** Pojedyncze uruchomienie `main.py` generuje wykresy, ale **NIE MA SENSU analizować statystyk z jednego wyniku**. Do analizy potrzeba wielu powtórzeń (zobacz CZĘŚĆ 2).
+**💡 Uwaga:** Pojedyncze uruchomienie `main.py` generuje wykresy dla jednego uruchomienia. Wykresy są pomocne aby ocenić jak radzi sobie nasz algorytm ze zbienością, zobaczyć animację i ścieżke. Ale **NIE MA SENSU analizować statystyk z jednego wyniku**. Do analizy potrzeba wielu powtórzeń (zobacz CZĘŚĆ 2) przy użyciu tych samych parametrow.
 
 ---
 

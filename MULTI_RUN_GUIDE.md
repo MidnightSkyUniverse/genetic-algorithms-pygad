@@ -1,4 +1,446 @@
+# Run multiple experiments
+
+## 🇵🇱 Polish Version
+
+## 🔍 Zrozumienie Workflow
+
+**Kluczowa koncepcja:**
+- **Jeden "run"** = 30 powtórzeń TYCH SAMYCH eksperymentów (zdefiniowanych w `config.yaml`)
+- **Wiele "runs"** = Testowanie RÓŻNYCH konfiguracji eksperymentów
+- Każdy `experiment_results_run_X.csv` zawiera dane tylko z JEDNEGO zestawu konfiguracji
+
+**Przykład:**
+- `run_1`: 30 powtórzeń [baseline, k3, k5, k7] → `experiment_results_run_1.csv`
+- `run_2`: 30 powtórzeń [baseline_v2, k9, roulette, sus] → `experiment_results_run_2.csv`
+- NIE MIESZAJ różnych konfiguracji w tym samym pliku CSV!
+
+---
+
+## ⚠️ Ważne Uwagi o Wizualizacjach
+
+**Skrypt `main.py` generuje wizualizacje (wykresy zbieżności, mapy tras, animacje) dla KAŻDEGO eksperymentu w KAŻDEJ iteracji.**
+
+**Problem:** Przy 30 iteracjach:
+- Wizualizacje są generowane 30 razy
+- Zostają tylko wykresy z OSTATNIEJ iteracji (pliki są nadpisywane)
+- Animacje znacząco spowalniają wykonanie
+- Większość wykresów jest niepotrzebna do analizy statystycznej
+
+### Opcje Wyłączenia Wizualizacji:
+
+**Opcja 1: Modyfikacja `config.yaml`** (Zalecane)
+```yaml
+visualization:
+  save_convergence: false    # Wyłącz wykresy zbieżności
+  save_route: false          # Wyłącz wizualizacje tras
+  save_animation: false      # Wyłącz animacje GIF (najwolniejsze!)
+  animation_interval: 5
+  dpi: 300
+```
+
+**Opcja 2: Zakomentowanie kodu wizualizacji w `main.py`**
+
+Znajdź sekcję wizualizacji w funkcji `run_single_experiment()`:
+```python
+# Visualizations
+viz_config = config['visualization']
+
+# if viz_config['save_convergence']:
+#     convergence_path = dirs['convergence'] / f"{exp_name}_convergence.png"
+#     plot_convergence(...)
+
+# if viz_config['save_animation']:
+#     animation_path = dirs['animations'] / f"{exp_name}_evolution.gif"
+#     create_animation(...)
+
+# if viz_config['save_route']:
+#     route_path = dirs['routes'] / f"{exp_name}_best_route.png"
+#     plot_route_with_all_connections(...)
+```
+
+---
+
+## 📋 Kompletny Workflow Krok po Kroku
+
+### Krok 1: Skonfiguruj Pierwszą Serię Eksperymentów
+
+Edytuj `config.yaml` aby zdefiniować eksperymenty:
+```yaml
+experiments:
+  - name: "baseline"
+    description: "Baseline Tournament (K=3)"
+    params: {}
+  
+  - name: "k5"
+    description: "Tournament K=5"
+    params:
+      K_tournament: 5
+  
+  - name: "k7"
+    description: "Tournament K=7"
+    params:
+      K_tournament: 7
+```
+
+### Krok 2: Uruchom 30 Powtórzeń
+
+**Linux/Mac:**
+```bash
+for i in {1..30}; do 
+    echo "Uruchamianie iteracji $i/30..."; 
+    python main.py; 
+done
+```
+
+**Windows (PowerShell):**
+```powershell
+for ($i=1; $i -le 30; $i++) {
+    Write-Host "Uruchamianie iteracji $i/30..."
+    python main.py
+}
+```
+
+**Windows (Wiersz polecenia):**
+```batch
+for /L %i in (1,1,30) do (
+    echo Uruchamianie iteracji %i/30...
+    python main.py
+)
+```
+
+**Co się dzieje:**
+- Każda iteracja testuje WSZYSTKIE eksperymenty z `config.yaml`
+- Wyniki są dodawane do `experiment_results.csv`
+- Wizualizacje w `outputs/` są nadpisywane za każdym razem
+- Po 30 iteracjach: CSV zawiera 30 × (liczba eksperymentów) wierszy
+
+### Krok 3: Archiwizuj Wyniki dla Tej Konfiguracji
+
+**KRYTYCZNE:** Przenieś wyniki przed zmianą config.yaml!
+
+```bash
+# Zmień nazwę folderu outputs
+mv outputs outputs_run_1
+
+# Przenieś CSV do folderu experiments
+mkdir -p experiments
+mv experiment_results.csv experiments/experiment_results_run_1.csv
+```
+
+**Twoja struktura folderów teraz:**
+```
+projekt/
+├── outputs_run_1/                        # Zarchiwizowane wykresy (ostatnia iteracja)
+│   ├── convergence/
+│   ├── routes/
+│   └── animations/
+└── experiments/
+    └── experiment_results_run_1.csv      # Wszystkie 30 powtórzeń
+```
+
+### Krok 4: Zmień Konfigurację dla Następnego Run'a
+
+Edytuj `config.yaml` z NOWYMI eksperymentami:
+```yaml
+experiments:
+  - name: "roulette"
+    description: "Roulette Wheel Selection"
+    params:
+      parent_selection_type: "rws"
+  
+  - name: "sus"
+    description: "Stochastic Universal Sampling"
+    params:
+      parent_selection_type: "sss"
+```
+
+### Krok 5: Powtórz Kroki 2-3 dla Każdej Nowej Konfiguracji
+
+```bash
+# Uruchom serię 2 (30 iteracji NOWYCH eksperymentów)
+for i in {1..30}; do echo "Uruchamianie iteracji $i/30..."; python main.py; done
+mv outputs outputs_run_2
+mv experiment_results.csv experiments/experiment_results_run_2.csv
+
+# Uruchom serię 3 (zmień config.yaml ponownie, potem uruchom)
+for i in {1..30}; do echo "Uruchamianie iteracji $i/30..."; python main.py; done
+mv outputs outputs_run_3
+mv experiment_results.csv experiments/experiment_results_run_3.csv
+
+# ... i tak dalej
+```
+
+### Krok 6: Uruchom Analizę Porównawczą Wielu Runs
+
+Gdy masz wiele plików `experiment_results_run_*.csv`:
+
+```bash
+python run_analyses.py
+```
+
+To:
+- Załaduje WSZYSTKIE pliki CSV z folderu `experiments/`
+- Porówna RÓŻNE konfiguracje eksperymentów między runs
+- Wygeneruje 7 kompleksowych wykresów
+- Stworzy raport statystyczny
+
+---
+
+## 📂 Oczekiwana Struktura Folderów
+
+Po ukończeniu 3 różnych serii konfiguracji:
+
+```
+projekt/
+├── main.py
+├── run_analyses.py
+├── config.yaml
+├── experiments/                          # ← Pliki CSV (jeden na serię konfiguracji)
+│   ├── experiment_results_run_1.csv     # Run 1: baseline, k3, k5, k7 (30 powtórzeń każdy)
+│   ├── experiment_results_run_2.csv     # Run 2: roulette, sus, rank (30 powtórzeń każdy)
+│   └── experiment_results_run_3.csv     # Run 3: testy ox_crossover (30 powtórzeń każdy)
+├── outputs_run_1/                        # ← Zarchiwizowane wizualizacje
+│   ├── convergence/
+│   ├── routes/
+│   └── animations/
+├── outputs_run_2/
+│   ├── convergence/
+│   ├── routes/
+│   └── animations/
+├── outputs_run_3/
+│   ├── convergence/
+│   ├── routes/
+│   └── animations/
+└── analysis_results/                     # ← Wygenerowane przez run_analyses.py
+    ├── data/
+    │   ├── best_runs_per_experiment.csv
+    │   ├── stability_per_run.csv
+    │   └── full_experiment_data.csv
+    ├── charts/
+    │   ├── chart1_top10_best_results.png
+    │   ├── chart2_stability_vs_quality.png
+    │   ├── chart3_three_perspectives.png
+    │   ├── chart4_cv_distribution.png
+    │   ├── chart5_parameter_comparison.png
+    │   ├── chart6_boxplot_all.png
+    │   └── chart7_heatmap.png
+    └── summary_report.txt
+```
+
+---
+
+## 💡 Wskazówki dla Efektywnych Eksperymentów
+
+1. **Zawsze wyłączaj wizualizacje** przy uruchamianiu 30 powtórzeń
+   - Oszczędza czas: ~5-10 sekund na eksperyment na iterację
+   - Dla 4 eksperymentów × 30 iteracji: oszczędza ~10-20 minut
+   - Animacje są najwolniejsze (5-10 MB każda, trwa sekundy)
+
+2. **Archiwizuj wyniki NATYCHMIAST** po ukończeniu serii
+   - Nie zapomnij przenieść zarówno `outputs/` jak i `experiment_results.csv`
+   - Mieszanie konfiguracji w jednym CSV psuje analizę
+
+3. **Używaj opisowych numerów run** w swoich notatkach
+   - Dokumentuj co testuje każdy run (np. run_1 = porównanie tournament)
+   - Pomaga przy późniejszej analizie wyników
+
+4. **Zacznij od mniejszej liczby powtórzeń** do testowania
+   - Spróbuj 5-10 powtórzeń najpierw aby zweryfikować konfigurację
+   - Potem uruchom pełne 30 powtórzeń na noc
+
+5. **Zachowaj pliki CSV, archiwizuj lub usuń foldery outputs**
+   - CSV zawiera wszystkie istotne dane
+   - Foldery `outputs_run_X/` są duże ale można je regenerować jeśli potrzeba
+   - Można usunąć stare foldery outputs aby zaoszczędzić miejsce na dysku
+
+6. **Uruchamiaj eksperymenty na noc lub podczas przerw**
+   - 30 powtórzeń × 4 eksperymenty × 2-3 minuty ≈ 2-4 godziny
+
+---
+
+## 🎯 Diagram Workflow
+
+```
+┌──────────────────────────────────────────┐
+│ 1. Edytuj config.yaml                    │
+│    Zdefiniuj zestaw eksperymentów        │
+│    (np. k3-k7)                           │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 2. Wyłącz wizualizacje (opcjonalnie)     │
+│    Ustaw save_animation: false w config  │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 3. Uruchom 30 iteracji                   │
+│    for i in {1..30}; do python main.py   │
+│    → Tworzy experiment_results.csv       │
+│    → Tworzy outputs/ (nadpisywane)       │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 4. Archiwizuj wyniki NATYCHMIAST         │
+│    mv outputs → outputs_run_1            │
+│    mv CSV → experiments/...run_1.csv     │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 5. Zmień config.yaml na następną serię   │
+│    Zdefiniuj NOWE eksperymenty           │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 6. Powtórz kroki 3-5 dla każdej config   │
+│    run_2, run_3, run_4, itd.             │
+└────────────┬─────────────────────────────┘
+             │
+             ▼
+┌──────────────────────────────────────────┐
+│ 7. Uruchom analizę porównawczą           │
+│    python run_analyses.py                │
+│    → Porównuje WSZYSTKIE runs            │
+└──────────────────────────────────────────┘
+```
+
+---
+
+## ❓ Częste Problemy
+
+**Problem**: "experiment_results.csv już istnieje, dane są dodawane"
+- **Rozwiązanie**: To jest NORMALNE podczas 30 iteracji
+- Przenieś CSV dopiero po ukończeniu WSZYSTKICH 30 iteracji
+- Nigdy nie mieszaj różnych konfiguracji w jednym CSV!
+
+**Problem**: Iteracje są bardzo wolne
+- **Rozwiązanie**: Wyłącz animacje w `config.yaml` (największa oszczędność czasu)
+- Każda animacja zajmuje 5-10 sekund i 5-10 MB
+- Wykresy zbieżności i wizualizacje tras też dodają czasu
+
+**Problem**: Zapomniałem przenieść plików, uruchomiłem nową konfigurację
+- **Rozwiązanie**: CSV ma teraz ZMIESZANE dane - musisz go usunąć i zacząć od nowa
+- Zawsze archiwizuj PRZED zmianą config.yaml!
+
+**Problem**: `run_analyses.py` pokazuje dziwne wyniki
+- **Rozwiązanie**: Sprawdź czy każdy plik CSV zawiera tylko JEDEN zestaw konfiguracji
+- Zweryfikuj nazewnictwo plików: `experiment_results_run_1.csv`, nie `run1.csv`
+- Każdy run powinien mieć spójne nazwy eksperymentów przez wszystkie 30 powtórzeń
+
+**Problem**: Brak miejsca na dysku
+- **Rozwiązanie**: Usuń stare foldery `outputs_run_X/` (szczególnie animations/)
+- Zachowaj tylko pliki CSV - zawierają wszystkie istotne dane
+- Pliki CSV są małe (~1-5 MB), animacje są duże (~50-200 MB na run)
+
+---
+
+## 📊 Co Powinien Zawierać Każdy Run
+
+Każdy plik `experiment_results_run_X.csv` powinien mieć:
+- **Te same nazwy eksperymentów** powtórzone 30 razy
+- **Te same parametry** dla każdego eksperymentu (oprócz random seed)
+- **Różne wartości best_distance** (ze względu na stochastyczność algorytmu)
+
+Przykładowa struktura:
+```
+timestamp,run_id,experiment_name,best_distance,...
+2025-01-15,12345,baseline,425.67,...
+2025-01-15,12345,k5,418.23,...
+2025-01-15,12345,k7,412.89,...
+2025-01-15,12345,baseline,428.91,...  ← iteracja 2
+2025-01-15,12345,k5,415.67,...        ← iteracja 2
+...
+(30 powtórzeń dla każdego eksperymentu)
+```
+
+**NIE MIESZAJ** konfiguracji typu:
+```
+❌ ŹLE:
+baseline (K=3), k5, k7,          ← z run 1
+roulette, sus,                   ← z run 2 (zmieszane!)
+ox_crossover                     ← z run 3 (zmieszane!)
+```
+
+---
+
+## 🔬 Dodatkowe Wskazówki
+
+### Optymalizacja Czasu
+- Wyłącz `save_animation: false` - największa oszczędność
+- Wyłącz `save_convergence: false` - średnia oszczędność
+- Pozostaw `save_route: true` - przydatne, nie spowalnia znacząco
+
+### Organizacja Danych
+- Twórz backup config.yaml dla każdego run'a
+- Nazywaj: `config_run_1.yaml`, `config_run_2.yaml`
+- Pomaga zapamiętać co testował każdy run
+
+### Dokumentacja
+- Prowadź notes z datami i celami każdego run'a
+- Zapisz hipotezy przed uruchomieniem eksperymentów
+- Notuj obserwacje po analizie wyników
+
+### Testowanie
+- **5 powtórzeń** - szybki test czy konfiguracja działa
+- **10 powtórzeń** - wstępna analiza stabilności
+- **30 powtórzeń** - pełna analiza statystyczna
+- **50+ powtórzeń** - gdy potrzebujesz bardzo wysokiej precyzji
+
+---
+
+## 📖 Kolejne Kroki
+
+Po zebraniu danych z wielu runs:
+
+1. **Uruchom `run_analyses.py`** - generuje kompleksowe porównanie
+2. **Przeanalizuj wykresy** w `analysis_results/charts/`
+3. **Przeczytaj raport** w `analysis_results/summary_report.txt`
+4. **Zidentyfikuj najlepszą konfigurację** dla swojego problemu
+5. **Stwórz prezentację** używając wygenerowanych wykresów
+
+**Pamiętaj:** Celem nie jest znalezienie jednego "najlepszego" wyniku, ale **zrozumienie** które parametry wpływają na jakość i stabilność algorytmu genetycznego dla problemu TSP.
+
+---
+
+## 🎓 Dla Studentów
+
+### Kluczowe Zasady Eksperymentowania
+
+1. **Jedna zmiana na raz**
+   - Zmieniaj tylko jeden parametr między runs
+   - Tak izolujesz wpływ konkretnego parametru
+
+2. **Dokumentuj wszystko**
+   - Co zmieniłeś
+   - Dlaczego to zmieniłeś
+   - Czego się spodziewasz
+
+3. **Analizuj przed kolejnym krokiem**
+   - Nie uruchamiaj wszystkich runs na ślepo
+   - Analizuj wyniki, formułuj hipotezy
+   - Projektuj następny run na podstawie wniosków
+
+4. **Statystyka > Pojedyncze wyniki**
+   - 30 powtórzeń daje ci statystyczną pewność
+   - Jeden dobry wynik może być szczęściem
+   - Niski CV = powtarzalne rezultaty
+
+5. **Czas to zasób**
+   - Zaplanuj eksperymenty przed uruchomieniem
+   - Wyłącz niepotrzebne wizualizacje
+   - Uruchamiaj na noc gdy to możliwe
+
+Powodzenia w eksperymentach! 🚀
+
+
+
 # Running Multiple Experiment Runs
+
+## 🇬🇧 English Version
 
 ## 🔍 Understanding the Workflow
 

@@ -24,7 +24,6 @@ projekt/
 ├── ga_tsp_analyses.py                   # Analiza pojedynczego run
 ├── run_analyses.py                      # ⭐ Analiza wielu runs
 ├── utils_unified_analyses.py            # ⭐ Funkcje do analizy wielu runs
-├── held_karp.py                         # Algorytm Held-Karp pozwala znaleść optymalna trasę dla zadanych miast
 ├── experiments/                         # Folder z danymi z wielu runs
 │   ├── experiment_results_run_1.csv
 │   ├── experiment_results_run_2.csv
@@ -99,6 +98,13 @@ Skrypt automatycznie:
 
 **Wyniki znajdziesz w:** `analysis_results/`
 
+**📖 Szczegółowy przewodnik:**  
+Zobacz [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) aby dowiedzieć się:
+- Jak uruchomić wiele eksperymentów automatycznie (np. 30 razy)
+- Jak wyłączyć wizualizacje dla szybszego działania
+- Jak organizować wyniki po każdym batch'u
+- Przykładowe komendy dla Linux/Mac/Windows
+
 ---
 
 ### Struktura Wyników - Pojedynczy Run
@@ -132,9 +138,50 @@ analysis_results/
 pip install numpy matplotlib seaborn pandas pygad pyyaml
 ```
 
-### Running the Program
+---
 
-1. **Run main experiments:**
+## 📂 Project Structure
+
+```
+project/
+├── main.py                              # Run individual experiments
+├── utils.py                             # Helper functions (TSP, GA, visualizations)
+├── config.yaml                          # Experiment configuration
+├── ga_tsp_analyses.py                   # Single run analysis
+├── run_analyses.py                      # ⭐ Multi-run analysis
+├── utils_unified_analyses.py            # ⭐ Multi-run analysis functions
+├── experiments/                         # Data folder for multiple runs
+│   ├── experiment_results_run_1.csv
+│   ├── experiment_results_run_2.csv
+│   └── ...
+├── outputs/                             # Single run results
+│   ├── convergence/
+│   ├── routes/
+│   ├── animations/
+│   └── analysis/
+└── analysis_results/                    # ⭐ Multi-run analysis results
+    ├── data/
+    │   ├── best_runs_per_experiment.csv
+    │   ├── stability_per_run.csv
+    │   └── full_experiment_data.csv
+    ├── charts/
+    │   ├── chart1_top10_best_results.png
+    │   ├── chart2_stability_vs_quality.png
+    │   ├── chart3_three_perspectives.png
+    │   ├── chart4_cv_distribution.png
+    │   ├── chart5_parameter_comparison.png
+    │   ├── chart6_boxplot_all.png
+    │   └── chart7_heatmap.png
+    └── summary_report.txt
+```
+
+---
+
+## 🚀 Running the Program
+
+### PART 1: Individual Experiments
+
+**Run main experiments:**
 ```bash
 python main.py
 ```
@@ -143,7 +190,7 @@ The script will automatically:
 - Generate visualizations in the `outputs/` folder
 - Save results to `experiment_results.csv`
 
-2. **Run results analysis:**
+**Run single-run analysis:**
 ```bash
 python ga_tsp_analyses.py
 ```
@@ -152,7 +199,41 @@ The script will generate:
 - Comparative charts (boxplot, scatter plot, histograms)
 - Save analysis in `outputs/analysis/` folder
 
-### Output Structure
+---
+
+### PART 2: Multi-Run Analysis (Advanced)
+
+**If you have multiple result files** (e.g., `experiment_results_run_1.csv`, `run_2.csv`, etc.) **in the `experiments/` folder:**
+
+```bash
+python run_analyses.py
+```
+
+The script will automatically:
+- Collect data from all `experiment_results_run_*.csv` files
+- Calculate stability statistics for each (run × experiment)
+- Generate **7 advanced charts**:
+  1. TOP 10 best individual results
+  2. Scatter plot: Stability vs Quality
+  3. Three perspectives TOP 5 (quality, stability, compromise)
+  4. Coefficient of variation (CV) distribution
+  5. Parameter impact (crossover, selection) on results
+  6. Boxplot comparing all experiments
+  7. Experiment consistency heatmap
+- Save a text report with conclusions
+
+**Results will be in:** `analysis_results/`
+
+**📖 Detailed Guide:**  
+See [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) to learn:
+- How to run multiple experiments automatically (e.g., 30 times)
+- How to disable visualizations for faster execution
+- How to organize results after each batch
+- Example commands for Linux/Mac/Windows
+
+---
+
+### Output Structure - Single Run
 ```
 outputs/
 ├── convergence/        # Algorithm convergence plots
@@ -161,11 +242,21 @@ outputs/
 └── analysis/          # Statistics and comparative analysis
 ```
 
+### Output Structure - Multiple Runs
+```
+analysis_results/
+├── data/              # 3 CSV files with aggregated data
+├── charts/            # 7 PNG charts for presentations
+└── summary_report.txt # Text report with conclusions
+```
+
 ---
 
 ## 📊 Quick Tips
 
 - Modify `config.yaml` to adjust experiment parameters
-- Each run appends results to `experiment_results.csv` (accumulative)
+- Each `main.py` run appends results to `experiment_results.csv` (accumulative)
+- For multi-run analysis, place CSV files in `experiments/` folder with naming: `experiment_results_run_*.csv`
 - Animations may take a few minutes to generate
 - All visualizations are saved at 300 DPI for presentation quality
+- The multi-run analysis generates publication-ready charts and statistical reports

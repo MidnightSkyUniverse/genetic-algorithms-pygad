@@ -72,41 +72,6 @@ Skrypt automatycznie:
 
 ### CZĘŚĆ 2: Wiele Powtórzeń i Analiza Statystyczna (Zalecane)
 
-**⚠️ Ważne:** Jeden "run" = 30 powtórzeń tej samej konfiguracji eksperymentów
-
-**Workflow:**
-
-**1. Uruchom 30 powtórzeń** dla pierwszej konfiguracji:
-```bash
-for i in {1..30}; do 
-    echo "Iteracja $i/30..."; 
-    python main.py; 
-done
-```
-
-**2. Uruchom analizę statystyczną** (pojedynczy run):
-```bash
-python ga_tsp_analyses.py
-```
-Wygeneruje:
-- Statystyki stabilności eksperymentów (CV, mean, std)
-- Wykresy porównawcze (boxplot, scatter plot, histogramy)
-- Analizę w folderze `outputs/analysis/`
-
-**3. Archiwizuj wyniki** (przed zmianą `config.yaml`!):
-```bash
-mv outputs outputs_run_1
-mv experiment_results.csv experiments/experiment_results_run_1.csv
-```
-
-**4. Zmień konfigurację** w `config.yaml` (nowe eksperymenty)
-
-**5. Powtórz kroki 1-3** dla `run_2`, `run_3`, itd.
-
-**6. Uruchom analizę porównawczą** wszystkich runs:
-```bash
-python run_analyses.py
-```
 
 **📖 Szczegółowy przewodnik:**  
 Zobacz [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) aby dowiedzieć się:
@@ -121,6 +86,9 @@ Zobacz [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) aby dowiedzieć się:
 ---
 
 ### 📊 Wygenerowane Wykresy (Analiza Porównawcza)
+
+Testując wiele różnych parametrów, w pewnym momencie będziecie potrzebować porównać wyniki między eksperymentami.
+Tak jak w webinarze, zebrałam wszystkie wyniki razem w celach porównawczych.
 
 `run_analyses.py` generuje 7 wykresów:
 1. TOP 10 najlepszych pojedynczych wyników
@@ -218,47 +186,12 @@ The script will automatically:
 - Generate visualizations in the `outputs/` folder
 - Append results to `experiment_results.csv`
 
-**💡 Note:** Single execution of `main.py` generates charts, but **statistical analysis makes NO SENSE with just one result**. Multiple repetitions are needed (see PART 2).
+**💡 Note:** Single execution of `main.py` generates charts,which are good to see convergence for single exection. But to see general behaviour of algorithm with set of parameters, you need to repeat the same experiment. Otherwise **statistical analysis makes NO SENSE with just one result**. Multiple repetitions are needed (see PART 2).
 
 ---
 
 ### PART 2: Multiple Repetitions and Statistical Analysis (Recommended)
 
-**⚠️ Important:** One "run" = 30 repetitions of the same experiment configuration
-
-**Workflow:**
-
-**1. Run 30 repetitions** for first configuration:
-```bash
-for i in {1..30}; do 
-    echo "Iteration $i/30..."; 
-    python main.py; 
-done
-```
-
-**2. Run statistical analysis** (single run):
-```bash
-python ga_tsp_analyses.py
-```
-Generates:
-- Experiment stability statistics (CV, mean, std)
-- Comparative charts (boxplot, scatter plot, histograms)
-- Analysis in `outputs/analysis/` folder
-
-**3. Archive results** (before changing `config.yaml`!):
-```bash
-mv outputs outputs_run_1
-mv experiment_results.csv experiments/experiment_results_run_1.csv
-```
-
-**4. Change configuration** in `config.yaml` (new experiments)
-
-**5. Repeat steps 1-3** for `run_2`, `run_3`, etc.
-
-**6. Run comparative analysis** of all runs:
-```bash
-python run_analyses.py
-```
 
 **📖 Detailed Guide:**  
 See [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) to learn:
@@ -273,6 +206,9 @@ See [MULTI_RUN_GUIDE.md](MULTI_RUN_GUIDE.md) to learn:
 ---
 
 ### 📊 Generated Charts (Comparative Analysis)
+
+Once you experiment with various parameters, you may wish like in the webinar, compare all experiments.
+In this case you run:
 
 `run_analyses.py` generates 7 charts:
 1. TOP 10 best individual results

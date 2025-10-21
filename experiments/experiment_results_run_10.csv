@@ -1,0 +1,241 @@
+timestamp,run_id,experiment_name,description,population_size,num_generations,mutation_percent_genes,crossover_type,parent_selection_type,K_tournament,best_distance,generations_completed
+2025-10-10 12:15:04,41444,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,451.39899679153297,185
+2025-10-10 12:15:04,41444,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,433.29450372246936,99
+2025-10-10 12:15:04,41444,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,427.3928683349374,300
+2025-10-10 12:15:04,41444,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,465.9076478988544,72
+2025-10-10 12:15:18,17538,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,491.7993232141063,146
+2025-10-10 12:15:18,17538,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,434.5222504037767,93
+2025-10-10 12:15:18,17538,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,480.25978336282463,104
+2025-10-10 12:15:18,17538,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,437.6286612494313,145
+2025-10-10 12:15:31,19697,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,473.7446514910311,99
+2025-10-10 12:15:31,19697,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,431.22637792494413,137
+2025-10-10 12:15:31,19697,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,452.5173546710481,149
+2025-10-10 12:15:31,19697,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,424.4472433254301,137
+2025-10-10 12:15:42,78336,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,486.3139030498233,120
+2025-10-10 12:15:42,78336,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,448.61044576286514,113
+2025-10-10 12:15:42,78336,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,505.1061084622318,74
+2025-10-10 12:15:42,78336,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,447.1453784772004,106
+2025-10-10 12:15:53,34556,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,498.68248321321573,97
+2025-10-10 12:15:53,34556,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,437.23070906712826,87
+2025-10-10 12:15:53,34556,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,433.8144888418661,180
+2025-10-10 12:15:53,34556,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,457.4005099962469,82
+2025-10-10 12:16:08,26490,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,474.9101145310862,162
+2025-10-10 12:16:08,26490,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,435.11341584109545,199
+2025-10-10 12:16:08,26490,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,443.5565816958896,167
+2025-10-10 12:16:08,26490,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,432.60882708785084,105
+2025-10-10 12:16:21,83659,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,441.9388095097924,190
+2025-10-10 12:16:21,83659,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,433.3236667698422,93
+2025-10-10 12:16:21,83659,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,435.4418434212021,118
+2025-10-10 12:16:21,83659,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,451.67493584450506,132
+2025-10-10 12:16:36,66367,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,470.4082269879695,188
+2025-10-10 12:16:36,66367,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,427.84592578933706,130
+2025-10-10 12:16:36,66367,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,469.03885410678015,104
+2025-10-10 12:16:36,66367,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,429.0273240780283,174
+2025-10-10 12:16:47,65057,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,472.0065456911539,131
+2025-10-10 12:16:47,65057,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,474.4315732517084,77
+2025-10-10 12:16:47,65057,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,456.81197027321076,129
+2025-10-10 12:16:47,65057,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,416.83295311526416,129
+2025-10-10 12:17:01,19702,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,487.34032218713116,90
+2025-10-10 12:17:01,19702,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,425.22113045661206,102
+2025-10-10 12:17:01,19702,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,487.8634430493312,137
+2025-10-10 12:17:01,19702,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,407.46683402179184,180
+2025-10-10 12:17:15,18553,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,417.6714009062648,183
+2025-10-10 12:17:15,18553,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,426.418782809887,118
+2025-10-10 12:17:15,18553,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,436.3920485837222,148
+2025-10-10 12:17:15,18553,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,426.19057893031186,150
+2025-10-10 12:17:28,47861,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,476.23393391509677,164
+2025-10-10 12:17:28,47861,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,449.56271099244407,90
+2025-10-10 12:17:28,47861,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,479.29590571195166,138
+2025-10-10 12:17:28,47861,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,454.9968928241887,144
+2025-10-10 12:17:40,94267,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,458.2836818700125,142
+2025-10-10 12:17:40,94267,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,482.67083076745865,88
+2025-10-10 12:17:40,94267,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,476.25954369138725,138
+2025-10-10 12:17:40,94267,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,470.4362099994266,99
+2025-10-10 12:17:55,46560,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,459.1911880474317,223
+2025-10-10 12:17:55,46560,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,413.5737417456963,165
+2025-10-10 12:17:55,46560,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,422.6873697224028,183
+2025-10-10 12:17:55,46560,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,443.6546986810218,113
+2025-10-10 12:18:08,40012,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,452.38934848770975,143
+2025-10-10 12:18:08,40012,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,454.11881079125334,113
+2025-10-10 12:18:08,40012,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,502.6410500983637,90
+2025-10-10 12:18:08,40012,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,404.27117889300655,157
+2025-10-10 12:18:24,29884,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,450.0359773206982,205
+2025-10-10 12:18:24,29884,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,453.01580285831386,109
+2025-10-10 12:18:24,29884,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,427.7180934614216,155
+2025-10-10 12:18:24,29884,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,442.93606073313623,184
+2025-10-10 12:18:41,41562,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,439.69878900939426,251
+2025-10-10 12:18:41,41562,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,424.0609915511471,114
+2025-10-10 12:18:41,41562,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,428.4049829760179,291
+2025-10-10 12:18:41,41562,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,426.97733612971336,114
+2025-10-10 12:18:56,33887,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,453.2778112449585,193
+2025-10-10 12:18:56,33887,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,452.13064330206083,144
+2025-10-10 12:18:56,33887,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,501.2005538304258,79
+2025-10-10 12:18:56,33887,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,435.2113276164914,165
+2025-10-10 12:19:11,89464,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,440.87124299508037,154
+2025-10-10 12:19:11,89464,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,455.76500722915466,90
+2025-10-10 12:19:11,89464,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,411.76708513495885,178
+2025-10-10 12:19:11,89464,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,404.6023499455105,191
+2025-10-10 12:19:24,95289,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,458.6522361680982,132
+2025-10-10 12:19:24,95289,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,458.72458964763047,143
+2025-10-10 12:19:24,95289,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,482.1233855214496,102
+2025-10-10 12:19:24,95289,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,398.62145158735706,121
+2025-10-10 12:19:36,11893,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,481.7278046729811,125
+2025-10-10 12:19:36,11893,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,436.3210318747932,120
+2025-10-10 12:19:36,11893,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,465.549527895069,78
+2025-10-10 12:19:36,11893,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,435.31758330452124,152
+2025-10-10 12:19:52,35929,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,428.25757793852597,214
+2025-10-10 12:19:52,35929,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,478.44672827592797,122
+2025-10-10 12:19:52,35929,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,416.2301601243896,154
+2025-10-10 12:19:52,35929,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,399.4240558522002,162
+2025-10-10 12:20:06,58324,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,469.4513786049471,139
+2025-10-10 12:20:06,58324,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,435.61441771915406,110
+2025-10-10 12:20:06,58324,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,438.48529763668387,191
+2025-10-10 12:20:06,58324,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,428.5524048895746,156
+2025-10-10 12:20:17,41777,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,491.4183055564248,168
+2025-10-10 12:20:17,41777,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,460.16267362914743,102
+2025-10-10 12:20:17,41777,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,515.8025783465147,82
+2025-10-10 12:20:17,41777,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,473.3193321342457,106
+2025-10-10 12:20:30,34884,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,466.95426289167324,159
+2025-10-10 12:20:30,34884,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,426.2183240782056,91
+2025-10-10 12:20:30,34884,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,413.0113733305822,181
+2025-10-10 12:20:30,34884,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,423.55978458938574,118
+2025-10-10 12:20:47,68386,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,472.1661015538674,102
+2025-10-10 12:20:47,68386,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,422.75570702996754,137
+2025-10-10 12:20:47,68386,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,471.54597154726935,198
+2025-10-10 12:20:47,68386,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,401.1278587640975,225
+2025-10-10 12:21:00,54253,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,493.06291712090155,131
+2025-10-10 12:21:00,54253,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,442.6780509155667,117
+2025-10-10 12:21:00,54253,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,421.6090331658093,115
+2025-10-10 12:21:00,54253,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,434.8906236576222,144
+2025-10-10 12:21:13,69542,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,476.57013270399796,126
+2025-10-10 12:21:13,69542,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,423.4676905904683,127
+2025-10-10 12:21:13,69542,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,472.4742660734887,166
+2025-10-10 12:21:13,69542,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,438.69046816088826,126
+2025-10-10 12:21:27,68141,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,468.48635203416137,174
+2025-10-10 12:21:27,68141,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,424.51971277366044,90
+2025-10-10 12:21:27,68141,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,440.4819595260064,132
+2025-10-10 12:21:27,68141,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,424.0877619841077,165
+2025-10-10 12:21:38,44951,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,439.38268097159914,105
+2025-10-10 12:21:38,44951,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,459.6973551035345,95
+2025-10-10 12:21:38,44951,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,517.4794050076703,79
+2025-10-10 12:21:38,44951,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,432.2285866347662,140
+2025-10-11 06:33:19,46535,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,439.46725476789914,128
+2025-10-11 06:33:19,46535,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,445.33864426481364,104
+2025-10-11 06:33:19,46535,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,398.6214515873571,174
+2025-10-11 06:33:19,46535,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,435.0583887044587,140
+2025-10-11 06:33:38,51396,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,474.5862811807964,159
+2025-10-11 06:33:38,51396,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,427.41572844461814,129
+2025-10-11 06:33:38,51396,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,418.21979957946905,200
+2025-10-11 06:33:38,51396,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,391.3929319834017,191
+2025-10-11 06:33:49,44295,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,482.8397336541051,104
+2025-10-11 06:33:49,44295,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,439.0843847994205,87
+2025-10-11 06:33:49,44295,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,457.63754570521024,143
+2025-10-11 06:33:49,44295,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,481.53572889146744,72
+2025-10-11 06:34:01,21370,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,422.6152578697347,184
+2025-10-11 06:34:01,21370,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,432.17808390646206,92
+2025-10-11 06:34:01,21370,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,472.5071357666062,110
+2025-10-11 06:34:01,21370,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,413.20051274912646,127
+2025-10-11 06:34:15,83174,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,458.1205561055813,156
+2025-10-11 06:34:15,83174,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,481.6916728313136,150
+2025-10-11 06:34:15,83174,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,475.7284556005898,100
+2025-10-11 06:34:15,83174,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,446.3282958042432,114
+2025-10-11 06:34:28,50679,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,443.56717455739505,159
+2025-10-11 06:34:28,50679,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,492.9102193396913,104
+2025-10-11 06:34:28,50679,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,442.21703641276616,155
+2025-10-11 06:34:28,50679,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,429.16267729369366,124
+2025-10-11 06:34:48,45546,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,467.97117309218334,122
+2025-10-11 06:34:48,45546,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,421.59696167416473,193
+2025-10-11 06:34:48,45546,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,470.9500723947459,239
+2025-10-11 06:34:48,45546,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,429.12316228431644,213
+2025-10-11 06:35:02,17016,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,432.79392305209933,108
+2025-10-11 06:35:02,17016,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,442.9235276602773,106
+2025-10-11 06:35:02,17016,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,423.6531221416217,120
+2025-10-11 06:35:02,17016,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,441.5738242970293,183
+2025-10-11 06:35:13,12317,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,474.7809341412657,125
+2025-10-11 06:35:13,12317,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,465.8298386050012,153
+2025-10-11 06:35:13,12317,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,486.5284567976871,81
+2025-10-11 06:35:13,12317,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,448.88888111966963,85
+2025-10-11 06:35:25,80653,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,484.3150866066326,97
+2025-10-11 06:35:25,80653,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,428.16985141037753,113
+2025-10-11 06:35:25,80653,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,496.96970914224426,72
+2025-10-11 06:35:25,80653,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,417.34167448360574,142
+2025-10-11 06:35:35,90473,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,479.8794398065274,78
+2025-10-11 06:35:35,90473,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,424.2302604739134,100
+2025-10-11 06:35:35,90473,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,486.9547258817626,94
+2025-10-11 06:35:35,90473,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,419.2711963736002,131
+2025-10-11 06:35:49,79966,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,443.6356684675729,181
+2025-10-11 06:35:49,79966,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,443.54798031846366,86
+2025-10-11 06:35:49,79966,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,441.60927526033686,92
+2025-10-11 06:35:49,79966,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,445.6631402230968,162
+2025-10-11 06:36:02,14811,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,464.22315082563796,110
+2025-10-11 06:36:02,14811,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,447.5971573744909,144
+2025-10-11 06:36:02,14811,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,445.5461534201076,192
+2025-10-11 06:36:02,14811,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,424.1783526763886,103
+2025-10-11 06:36:17,75317,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,447.3214151275949,139
+2025-10-11 06:36:17,75317,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,428.96752844904637,84
+2025-10-11 06:36:17,75317,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,454.4769038222624,180
+2025-10-11 06:36:17,75317,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,448.7678166110935,193
+2025-10-11 06:36:35,72944,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,437.01876536054607,144
+2025-10-11 06:36:35,72944,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,442.6666688795104,132
+2025-10-11 06:36:35,72944,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,457.41413178384374,202
+2025-10-11 06:36:35,72944,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,402.8022699072844,231
+2025-10-11 06:36:48,59814,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,484.0978177453129,82
+2025-10-11 06:36:48,59814,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,420.6103065950211,146
+2025-10-11 06:36:48,59814,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,432.6054387599849,191
+2025-10-11 06:36:48,59814,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,422.05129022616126,98
+2025-10-11 06:37:03,56574,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,504.85161445636436,108
+2025-10-11 06:37:03,56574,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,455.62911349966527,141
+2025-10-11 06:37:03,56574,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,448.41796633366255,145
+2025-10-11 06:37:03,56574,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,450.0857155205515,160
+2025-10-11 06:37:17,49892,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,489.0680256579343,109
+2025-10-11 06:37:17,49892,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,429.5523995762838,87
+2025-10-11 06:37:17,49892,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,464.7686813353191,196
+2025-10-11 06:37:17,49892,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,429.2863336747224,190
+2025-10-11 06:37:34,83864,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,463.3630416675724,184
+2025-10-11 06:37:34,83864,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,431.2722167553647,159
+2025-10-11 06:37:34,83864,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,458.98764585554255,131
+2025-10-11 06:37:34,83864,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,425.0087230815933,197
+2025-10-11 06:37:50,50447,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,488.95412364045944,128
+2025-10-11 06:37:50,50447,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,423.7325561827516,129
+2025-10-11 06:37:50,50447,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,419.9643447575785,190
+2025-10-11 06:37:50,50447,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,451.688194120579,177
+2025-10-11 06:38:01,88964,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,479.92642781296763,138
+2025-10-11 06:38:01,88964,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,441.6762056685969,77
+2025-10-11 06:38:01,88964,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,497.423278297823,91
+2025-10-11 06:38:01,88964,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,408.19735586733503,142
+2025-10-11 06:38:16,87032,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,442.5644342283561,214
+2025-10-11 06:38:16,87032,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,438.4299102561663,112
+2025-10-11 06:38:16,87032,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,413.7173033132682,215
+2025-10-11 06:38:16,87032,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,417.4403137426249,123
+2025-10-11 06:38:31,95067,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,474.31840921046654,186
+2025-10-11 06:38:31,95067,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,451.1926692411221,84
+2025-10-11 06:38:31,95067,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,438.42254754631347,235
+2025-10-11 06:38:31,95067,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,431.50766683029957,154
+2025-10-11 06:38:51,47843,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,453.48050790104486,157
+2025-10-11 06:38:51,47843,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,427.84592578933706,96
+2025-10-11 06:38:51,47843,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,471.7082502161967,265
+2025-10-11 06:38:51,47843,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,409.25498435179475,280
+2025-10-11 06:39:06,75040,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,460.33832993551295,104
+2025-10-11 06:39:06,75040,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,427.381045288631,114
+2025-10-11 06:39:06,75040,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,423.8309529923575,172
+2025-10-11 06:39:06,75040,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,411.0953912981415,160
+2025-10-11 06:39:17,49780,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,435.16911216267516,158
+2025-10-11 06:39:17,49780,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,417.59140086233424,124
+2025-10-11 06:39:17,49780,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,495.75245915255744,113
+2025-10-11 06:39:17,49780,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,438.24449984516286,77
+2025-10-11 06:39:32,55536,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,471.1841726722854,88
+2025-10-11 06:39:32,55536,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,421.65789138735147,174
+2025-10-11 06:39:32,55536,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,423.8533110094098,263
+2025-10-11 06:39:32,55536,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,429.789772863898,117
+2025-10-11 06:39:44,84675,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,468.0188515546684,146
+2025-10-11 06:39:44,84675,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,423.6478663937177,122
+2025-10-11 06:39:44,84675,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,452.8406622184242,165
+2025-10-11 06:39:44,84675,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,469.8240622406056,75
+2025-10-11 06:39:57,40830,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,482.5658318803588,163
+2025-10-11 06:39:57,40830,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,424.7699450914904,179
+2025-10-11 06:39:57,40830,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,520.9024588819292,69
+2025-10-11 06:39:57,40830,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,442.4441698853686,106
+2025-10-11 06:40:10,78171,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,434.8807262751374,168
+2025-10-11 06:40:10,78171,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,413.84459566898227,87
+2025-10-11 06:40:10,78171,sel_tournament_k3_mut_inversion,Tournament (K=3) mutation=inversion,200,300,10,single_point,tournament,3,398.4672614337516,233
+2025-10-11 06:40:10,78171,sel_tournament_k7_mut_inversion,Tournament (K=7) mutation=inversion,300,300,25,two_points,tournament,7,434.89981430019014,103

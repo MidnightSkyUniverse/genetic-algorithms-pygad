@@ -1,0 +1,121 @@
+timestamp,run_id,experiment_name,description,population_size,num_generations,mutation_percent_genes,crossover_type,parent_selection_type,K_tournament,best_distance,generations_completed
+2025-10-09 08:04:39,44732,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,514.7546810637793,87
+2025-10-09 08:04:39,44732,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,478.5839183705531,115
+2025-10-09 08:04:39,44732,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,476.8891821130931,251
+2025-10-09 08:04:39,44732,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,613.1555782102796,108
+2025-10-09 08:08:43,72915,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,451.90750453523196,173
+2025-10-09 08:08:43,72915,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,458.3059576525788,115
+2025-10-09 08:08:43,72915,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,562.437616305929,130
+2025-10-09 08:08:43,72915,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,585.4730831659192,61
+2025-10-09 08:08:46,57577,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,498.18430351754597,126
+2025-10-09 08:08:46,57577,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,508.41944768284424,70
+2025-10-09 08:08:46,57577,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,541.7932378449332,91
+2025-10-09 08:08:46,57577,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,621.1956089781534,100
+2025-10-09 08:08:50,86862,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,474.5399943724293,114
+2025-10-09 08:08:50,86862,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,496.34253931938423,96
+2025-10-09 08:08:50,86862,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,579.1296385593,111
+2025-10-09 08:08:50,86862,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,618.6373372341873,66
+2025-10-09 08:08:54,54218,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,445.7559582292191,193
+2025-10-09 08:08:54,54218,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,476.6482714547698,91
+2025-10-09 08:08:54,54218,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,602.9459990995451,94
+2025-10-09 08:08:54,54218,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,615.6175165535944,101
+2025-10-09 08:08:58,83130,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,482.07167814966886,131
+2025-10-09 08:08:58,83130,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,571.0325214942891,70
+2025-10-09 08:08:58,83130,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,585.4042961563923,133
+2025-10-09 08:08:58,83130,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,605.0235111014125,130
+2025-10-09 08:09:02,40068,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,455.7004345246572,84
+2025-10-09 08:09:02,40068,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,529.0430790202183,122
+2025-10-09 08:09:02,40068,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,547.42423901414,209
+2025-10-09 08:09:02,40068,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,642.6958560184726,54
+2025-10-09 08:09:07,27684,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,468.6700373840411,182
+2025-10-09 08:09:07,27684,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,523.3344805239003,134
+2025-10-09 08:09:07,27684,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,585.5963459573812,138
+2025-10-09 08:09:07,27684,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,631.1224910091543,157
+2025-10-09 08:09:11,71362,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,428.25757793852614,140
+2025-10-09 08:09:11,71362,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,525.7042521090575,130
+2025-10-09 08:09:11,71362,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,568.5391795070159,103
+2025-10-09 08:09:11,71362,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,639.9279267027591,64
+2025-10-09 08:09:17,17475,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,427.0926750197616,144
+2025-10-09 08:09:17,17475,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,506.092726951108,211
+2025-10-09 08:09:17,17475,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,610.6416890001503,110
+2025-10-09 08:09:17,17475,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,557.5583195208441,229
+2025-10-09 08:09:21,45442,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,462.16390767331944,112
+2025-10-09 08:09:21,45442,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,485.38130566193985,149
+2025-10-09 08:09:21,45442,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,550.1312626073053,130
+2025-10-09 08:09:21,45442,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,586.343655068748,113
+2025-10-09 08:09:26,11290,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,437.85343700072207,231
+2025-10-09 08:09:26,11290,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,493.20305443107776,71
+2025-10-09 08:09:26,11290,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,592.1309210213926,94
+2025-10-09 08:09:26,11290,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,565.2663835777904,161
+2025-10-09 08:09:30,18088,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,472.086023143284,158
+2025-10-09 08:09:30,18088,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,528.4083966418332,63
+2025-10-09 08:09:30,18088,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,597.7102519255665,131
+2025-10-09 08:09:30,18088,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,634.9187024511207,98
+2025-10-09 08:09:34,37227,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,481.1784967974841,109
+2025-10-09 08:09:34,37227,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,521.2198088023365,131
+2025-10-09 08:09:34,37227,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,540.3788097044131,148
+2025-10-09 08:09:34,37227,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,601.991216891898,116
+2025-10-09 08:09:39,68500,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,475.3629071229508,95
+2025-10-09 08:09:39,68500,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,484.9295995066513,143
+2025-10-09 08:09:39,68500,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,574.7732171597909,138
+2025-10-09 08:09:39,68500,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,575.8959605783749,130
+2025-10-09 08:09:45,96207,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,454.0730687747306,168
+2025-10-09 08:09:45,96207,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,465.4896460333423,183
+2025-10-09 08:09:45,96207,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,547.5056245793952,159
+2025-10-09 08:09:45,96207,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,595.0499948503605,173
+2025-10-09 08:09:49,19536,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,459.3063657578907,127
+2025-10-09 08:09:49,19536,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,494.6495002714283,112
+2025-10-09 08:09:49,19536,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,518.5591777545601,173
+2025-10-09 08:09:49,19536,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,579.0302798886969,118
+2025-10-09 08:09:54,88959,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,435.1827102481536,153
+2025-10-09 08:09:54,88959,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,482.921088771044,117
+2025-10-09 08:09:54,88959,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,546.3856511186541,125
+2025-10-09 08:09:54,88959,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,556.364095969691,131
+2025-10-09 08:09:58,62594,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,471.0694401271268,144
+2025-10-09 08:09:58,62594,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,478.3635522415425,131
+2025-10-09 08:09:58,62594,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,632.5690779037687,60
+2025-10-09 08:09:58,62594,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,562.9621330485495,155
+2025-10-09 08:10:03,82274,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,501.6989339789195,181
+2025-10-09 08:10:03,82274,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,452.5392322516118,135
+2025-10-09 08:10:03,82274,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,468.2321896331463,214
+2025-10-09 08:10:03,82274,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,572.3389325912581,113
+2025-10-09 08:10:08,87933,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,431.60394031822955,175
+2025-10-09 08:10:08,87933,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,449.8686741089249,94
+2025-10-09 08:10:08,87933,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,563.0237716737456,131
+2025-10-09 08:10:08,87933,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,578.9764903396066,123
+2025-10-09 08:10:11,75077,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,451.68024373390784,116
+2025-10-09 08:10:11,75077,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,521.3269397132087,126
+2025-10-09 08:10:11,75077,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,543.3129152644958,80
+2025-10-09 08:10:11,75077,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,630.8674416468183,63
+2025-10-09 08:10:16,84012,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,455.3361563803388,138
+2025-10-09 08:10:16,84012,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,468.7647724420738,118
+2025-10-09 08:10:16,84012,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,486.7176264898417,221
+2025-10-09 08:10:16,84012,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,620.9108535811764,122
+2025-10-09 08:10:20,66962,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,464.05063148079535,149
+2025-10-09 08:10:20,66962,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,523.1347461629774,152
+2025-10-09 08:10:20,66962,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,652.3002835938203,81
+2025-10-09 08:10:20,66962,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,642.7438362002351,99
+2025-10-09 08:10:25,83833,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,474.84640056445977,150
+2025-10-09 08:10:25,83833,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,439.82362003312454,207
+2025-10-09 08:10:25,83833,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,583.2586031262064,121
+2025-10-09 08:10:25,83833,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,577.6835387278327,82
+2025-10-09 08:10:29,20710,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,465.3699524950267,113
+2025-10-09 08:10:29,20710,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,504.67977505659326,72
+2025-10-09 08:10:29,20710,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,534.7238546734803,162
+2025-10-09 08:10:29,20710,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,635.5536281350518,133
+2025-10-09 08:10:34,39093,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,477.7258670629374,126
+2025-10-09 08:10:34,39093,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,517.26011683825,69
+2025-10-09 08:10:34,39093,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,589.1599140938732,195
+2025-10-09 08:10:34,39093,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,591.8678137559449,129
+2025-10-09 08:10:39,99024,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,450.9041815941035,269
+2025-10-09 08:10:39,99024,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,501.633071739414,64
+2025-10-09 08:10:39,99024,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,605.311836210321,54
+2025-10-09 08:10:39,99024,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,517.9450760334354,185
+2025-10-09 08:10:42,68355,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,505.2441025623086,112
+2025-10-09 08:10:42,68355,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,490.00058257590905,95
+2025-10-09 08:10:42,68355,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,591.258078779911,75
+2025-10-09 08:10:42,68355,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,626.6241737672988,131
+2025-10-09 08:10:48,56412,baseline,Baseline Tournament (K=3),100,300,10,single_point,tournament,3,453.4792256005413,300
+2025-10-09 08:10:48,56412,sel_tournament_k7,Tournament (K=7),100,300,10,single_point,tournament,7,503.8814998877509,88
+2025-10-09 08:10:48,56412,sel_roulette,Roulette Wheel,100,300,10,single_point,rws,3,521.1981038731305,162
+2025-10-09 08:10:48,56412,sel_sus,Stochastic Universal,100,300,10,single_point,sss,3,577.4942050290958,107

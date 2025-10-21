@@ -1,5 +1,0 @@
-timestamp,run_id,experiment_name,description,population_size,num_generations,mutation_percent_genes,crossover_type,parent_selection_type,K_tournament,best_distance,generations_completed
-2025-10-11 07:55:23,95701,baseline,Baseline Tournament (K=3),200,300,10,single_point,tournament,3,427.0926750197617,129
-2025-10-11 07:55:23,95701,sel_tournament_k7,Tournament (K=7),300,300,25,two_points,tournament,7,446.6455373779602,99
-2025-10-11 07:55:23,95701,sel_tournament_k3_adaptive,Tournament (K=3) adaptive,200,300,"[5, 20]",single_point,tournament,3,532.915506596677,62
-2025-10-11 07:55:23,95701,sel_tournament_k7_adaptive,Tournament (K=7) adaptive,300,300,"[15, 35]",two_points,tournament,7,543.4747763520115,54

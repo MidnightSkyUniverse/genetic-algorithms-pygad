@@ -1,5 +1,0 @@
-experiment_name,best_distance_count,best_distance_mean,best_distance_std,best_distance_min,best_distance_max,generations_completed_mean,generations_completed_std,cv_distance
-sel_tournament_k5_like_k3,30,407.18,16.99,386.33,446.76,178.57,52.6,4.17
-sel_tournament_k7,30,432.05,18.45,410.67,479.98,128.17,46.01,4.27
-sel_tournament_k5_like_k7,30,447.65,21.85,392.49,497.87,136.63,39.93,4.88
-baseline,30,452.06,29.45,396.54,532.76,160.13,47.96,6.51

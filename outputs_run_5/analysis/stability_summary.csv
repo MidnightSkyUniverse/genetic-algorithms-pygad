@@ -1,5 +1,0 @@
-experiment_name,best_distance_count,best_distance_mean,best_distance_std,best_distance_min,best_distance_max,generations_completed_mean,generations_completed_std,cv_distance
-sel_tournament_k3_parents_mating_50prc,30,452.27,21.09,403.4,501.24,156.23,46.53,4.66
-baseline,30,458.07,22.29,424.23,512.81,138.73,38.03,4.87
-sel_tournament_k7_crossover_parents_mating_50prc,30,474.54,26.13,426.22,525.89,111.0,41.6,5.51
-sel_tournament_k7,30,477.46,28.44,408.13,518.7,89.7,23.87,5.96

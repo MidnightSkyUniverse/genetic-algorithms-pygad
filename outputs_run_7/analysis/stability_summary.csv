@@ -1,0 +1,5 @@
+experiment_name,best_distance_count,best_distance_mean,best_distance_std,best_distance_min,best_distance_max,generations_completed_mean,generations_completed_std,cv_distance
+sel_tournament_k3_percent_genes_5,30,457.41,21.34,414.04,503.69,156.8,39.89,4.67
+baseline,30,459.65,22.09,431.11,534.33,147.2,38.21,4.81
+sel_tournament_k7,30,471.6,32.33,418.33,558.4,98.97,39.79,6.86
+sel_tournament_k7_percent_genes_5,30,479.67,34.42,426.38,550.28,105.03,28.57,7.18

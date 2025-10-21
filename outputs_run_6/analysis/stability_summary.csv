@@ -1,0 +1,5 @@
+experiment_name,best_distance_count,best_distance_mean,best_distance_std,best_distance_min,best_distance_max,generations_completed_mean,generations_completed_std,cv_distance
+baseline,30,462.49,21.45,429.79,513.46,150.3,39.21,4.64
+sel_tournament_k3_mut_prob_5prc,30,459.75,21.65,420.41,509.23,160.3,46.58,4.71
+sel_tournament_k7_mut_prob_5prc,30,476.27,22.66,437.68,516.87,94.7,23.35,4.76
+sel_tournament_k7,30,476.66,30.42,425.35,565.52,101.73,31.58,6.38
